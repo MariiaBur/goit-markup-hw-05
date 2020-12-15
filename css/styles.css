@@ -678,6 +678,10 @@ img {
   margin-bottom: 0px;
 }
 
+.projects-list-item {
+  position: relative;
+}
+
 .link-card {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -686,6 +690,27 @@ img {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-list-description {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: #fff;
+
+  display: inline-block;
+  padding: 63px 24px;
+
+  background-color: #2196f3;
 }
 
 .projects-name-decor {
