@@ -71,7 +71,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="modal-btn" type="button">Заказать услугу</button>
+          <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -149,6 +149,7 @@
                 src="./images/doings/doings-1.jpg"
                 alt="разработчик пишет код"
               />
+              <p class="work-description">Десктопные приложения</p>
             </li>
             <li class="work-list-item">
               <img
@@ -156,6 +157,7 @@
                 src="./images/doings/doings-2.jpg"
                 alt="на мониторе варианты дизайна для мобильного приложения"
               />
+              <p class="work-description">Мобильные приложения</p>
             </li>
             <li class="work-list-item">
               <img
@@ -163,6 +165,7 @@
                 src="./images/doings/doings-3.jpg"
                 alt="дизайнер выбирает цвет"
               />
+              <p class="work-description">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -485,5 +488,15 @@
         </div>
        </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-btn-icon">
+            <use href="./images/decor/sprite-optimize.svg#close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
