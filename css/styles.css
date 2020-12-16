@@ -86,6 +86,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
+  padding-bottom: 32px;
+  padding-top: 32px;
+
   color: #212121;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -630,6 +633,8 @@ img {
 .filters-btn:focus {
   background-color: #2196f3;
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-name {
@@ -678,10 +683,6 @@ img {
   margin-bottom: 0px;
 }
 
-.projects-list-item {
-  position: relative;
-}
-
 .link-card {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -692,11 +693,14 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.project-card-overly {
+  position: relative;
+  overflow: hidden;
+}
+
 .projects-list-description {
   position: absolute;
   top: 0;
-  opacity: 0;
-  visibility: hidden;
 
   font-family: Roboto;
   font-weight: 400;
@@ -707,10 +711,16 @@ img {
 
   color: #fff;
 
-  display: inline-block;
   padding: 63px 24px;
 
-  background-color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-card:hover .projects-list-description {
+  transform: translateY(0);
 }
 
 .projects-name-decor {
@@ -733,16 +743,16 @@ img {
 
   background: rgba(0, 0, 0, 0.2);
 
-  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
-  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .modal {
@@ -750,7 +760,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
   width: 528px;
   min-height: 581px;
